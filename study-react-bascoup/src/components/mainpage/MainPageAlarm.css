@@ -1,0 +1,23 @@
+.MainPageAlarm {
+    background: wheat;
+    /* padding-top: 20px;
+    padding-bottom: 220px; */
+    width: 100%;
+    height: 30%;
+    bottom: 0px;
+    position: absolute;
+}
+
+.couponalarm-header{
+    font-weight: bolder;
+    font-size: 24px;
+    margin: 32px 0px 10px 32px;
+    font-family: 'SpoqaHanSansNeo-Bold';
+    /* margin-top: 32px; */
+}
+
+.coupons-wrapper {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}

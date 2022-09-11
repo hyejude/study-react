@@ -1,0 +1,45 @@
+.body {
+}
+
+.CouponItem {
+    display: flex;
+    width: 300px; /* 고정해야 됨 */
+    padding: 5px;
+    background: whitesmoke;
+    border-radius: 16px;
+    margin: 20px 20px 20px 20px;
+    border: 1px solid #e9ecef;;
+    box-shadow: 0 3px 6px rgba(0,0,0,0), 0 3px 6px rgba(0,0,0,0.08);
+}
+
+.coupon-logo img {
+    width: 64px;
+    margin: 10px;
+}
+
+.coupon-title {
+    display: flex;
+    margin: 10px 10px 5px 10px;
+    font-size: 16px;
+    font-family: 'SpoqaHanSansNeo-Bold';
+}
+
+.coupon-brand {
+    margin-right: 5px;
+}
+
+.coupon-item {
+
+}
+
+.coupon-dday {
+    font-size: 15px;
+    margin: 0px 0px 5px 10px;
+    color: red;
+}
+
+.coupon-deadline {
+    margin-left: 10px;
+    font-size: 12px;
+
+}

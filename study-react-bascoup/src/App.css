@@ -1,0 +1,13 @@
+body {
+  background: #f8f9fa;
+}
+
+
+.App {
+  font-family: 'SpoqaHanSansNeo-Bold';
+}
+
+@font-face {
+  font-family: "SpoqaHanSansNeo-Bold";
+  src: url(./font/SpoqaHanSansNeo-Bold.ttf);
+}

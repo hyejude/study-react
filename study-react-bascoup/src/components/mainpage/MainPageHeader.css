@@ -1,0 +1,31 @@
+.MainPageHeader {
+    padding: 25px;
+    background: white;
+    display: flex;
+    font-family: 'Jeju Gothic', sans-serif;
+}
+
+.logo {
+    color: #f08c00;
+    font-weight: bold;
+    font-family: 'SpoqaHanSansNeo-Bold';
+}
+
+.menu-wrapper{
+    justify-content: center;
+    display: flex;
+    flex: 1;
+}
+
+.memu-item {
+    color: #ff922b;
+    margin-right: 100px;
+    font-family: 'SpoqaHanSansNeo-Bold';
+}
+
+.memu-item:hover {
+    color: #868e96;
+    cursor: pointer;
+}
+
+
