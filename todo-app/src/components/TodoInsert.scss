@@ -4,11 +4,11 @@
 
     input {
         background: none;
-        outline: none; // ?
+        outline: none;
         border: none;
         padding: 0.5rem;
-        font-size: 1.25rem;
-        line-height: 1.5; // ?
+        font-size: 1.125rem;
+        line-height: 1.5;
         color: white;
 
         &::placeholder {
@@ -35,7 +35,5 @@
         &:hover {
             background: #adb5bd;
         }
-
-        // ? transition과 hover
     }
 }
