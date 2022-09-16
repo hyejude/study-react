@@ -8,5 +8,4 @@ const TodoTemplate = ({ children }) => {
         </div>
     );
 };
-
 export default TodoTemplate;
