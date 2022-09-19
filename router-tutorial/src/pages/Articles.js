@@ -1,11 +1,6 @@
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet } from 'react-router-dom';
 
 const Articles = () => {
-    const articleStyle = {
-        color: 'green',
-        fontSize: 21,
-    };
-
     return (
         <div>
             <Outlet />
@@ -15,19 +10,21 @@ const Articles = () => {
                 <ArticleItem id={3} />
             </ul>
         </div>
+
     );
 };
 
+
 const ArticleItem = ({ id }) => {
-    const activStyle = {
+    const articleStyle = {
         color: 'green',
         fontSize: 21,
     };
     return (
         <li>
             <NavLink
-                to={`articles/${id}`}
-                style={({ isActive }) => (isActive ? activStyle : undefined)}
+                to={`/articles/${id}`}
+                style={({ isActive }) => (isActive ? articleStyle : undefined)}
             >
                 게시글 {id}
             </NavLink>

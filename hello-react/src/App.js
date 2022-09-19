@@ -1,11 +1,11 @@
-import ScrollBox from './components/ScrollBox';
+import EventPractice from './components/EventPractice';
 import { Component } from 'react';
 
 class App extends Component {
   render() {
     return (
       <div>
-        <ScrollBox />
+        <EventPractice />
       </div>
     );
   }

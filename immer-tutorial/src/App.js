@@ -3,7 +3,7 @@ import produce from 'immer';
 
 const App = () => {
   const nextId = useRef(1);
-  const [form, setForm] = useState({ name: '', username: '' });
+  const [form, setForm] = useState({ 'name': '', 'username': '' });
   const [data, setData] = useState({
     array: [],
     uselessValue: null
@@ -16,8 +16,6 @@ const App = () => {
         produce(draft => {
           draft[name] = value;
         })
-        // ...form,
-        // [name]: [value]
       );
     },
     []
@@ -34,7 +32,7 @@ const App = () => {
 
       setData(
         produce(draft => {
-          draft.array.push(info);
+          draft.array.push(info)
         })
       );
 
@@ -51,7 +49,7 @@ const App = () => {
     id => {
       setData(
         produce(draft => {
-          draft.array.filter(draft.array.findIndex(info => info.id === id), 1);
+          draft.array.splice(draft.array.findIndex(info => info.id === id), 1);
         })
       );
     },
@@ -62,30 +60,29 @@ const App = () => {
     <div>
       <form onSubmit={onSubmit}>
         <input
-          name="username"
-          placeholder='아이디'
-          value={form.username}
+          name='username'
+          placeholder='ID'
+          value={form.username} c
           onChange={onChange}
         />
         <input
-          name="name"
-          placeholder='이름'
+          name='name'
+          placeholder='name'
           value={form.name}
           onChange={onChange}
         />
         <button type='submit'>등록</button>
       </form>
-      <div>
-        <ul>
-          {data.array.map(info => (
-            <li key={info.id} onClick={() => onRemove(info.id)}>
-              {info.username} ({info.name})
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul>
+        {data.array.map(info => (
+          <li key={info.id} onClick={() => onRemove(info.id)}>
+            {info.username} ({info.name})
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+
+  );
 };
 
 export default App;
