@@ -1,12 +1,11 @@
-import { Route, Routes } from 'react-router-dom';
-import NewsPage from './page/NewsPage';
+import NewsList from "./components/NewsList";
 
 const App = () => {
+
   return (
-    <Routes>
-      <Route path='/' element={<NewsPage />} />
-      <Route path='/:category' element={<NewsPage />} />
-    </Routes>
+    <div>
+      <NewsList />
+    </div>
   );
 };
 
