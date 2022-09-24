@@ -1,0 +1,116 @@
+proxy는 8080 기본 포트
+
+* fab 선택 후 -> tech 선택 -> tech 선택 후 lot code 선택 가능 (즉 전 단계의 값에 따라 이후 선택하는 값이 달라짐)
+* body = {fabNm:'',techNm:'',lotcodeNm:''
+}
+
+0. fab은 정적 리스트 만들어서 렌더링 완료(멘토가 백엔드로 안만들어둠). 선택한 하나의 값, useState로 업데이트 했고 값 잘 변경 됐는지 확인 완료 (아까 말한 리액트 개발자 도구)
+정적 리스트 데이터 형식은 [
+    {ROWNUM:'1',fabNm:'m10'
+    },
+    {ROWNUM:'2',fabNm:'m11'
+    }
+]
+
+1. tech
+req_url: 기본주소/getTechList
+req_body {fabNm:'m10',techNm:'',lotcodeNm:''
+} -> res_body [
+    {ROWNUM:'1', techNm:'tA'
+    },
+    {ROWNUM:'2', techNm:'tB'
+    }
+]
+req_body {fabNm:'m11',techNm:'',lotcodeNm:''
+} -> res_body [
+    {ROWNUM:'1', techNm:'tC'
+    },
+    {ROWNUM:'2', techNm:'tD'
+    }
+]
+req_body {fabNm:'m12',techNm:'',lotcodeNm:''
+} -> res_body [
+    {ROWNUM:'1', techNm:'tE'
+    },
+    {ROWNUM:'2', techNm:'tF'
+    }
+]
+
+2. lot code
+req_url: 기본주소/getLotCode
+req_body {fabNm:'m10',techNm:'tA',lotcodeNm:''
+} -> res_body [
+    {ROWNUM:'1', techNm:'lA'
+    },
+    {ROWNUM:'2', techNm:'lB'
+    }
+]
+req_body {fabNm:'m10',techNm:'tB',lotcodeNm:''
+} -> res_body [
+    {ROWNUM:'1', techNm:'lC'
+    },
+    {ROWNUM:'2', techNm:'lD'
+    }
+]
+
+req_body {fabNm:'m11',techNm:'tC',lotcodeNm:''
+} -> res_body [
+    {ROWNUM:'1', techNm:'lE'
+    },
+    {ROWNUM:'2', techNm:'lF'
+    }
+]
+req_body {fabNm:'m11',techNm:'tD',lotcodeNm:''
+} -> res_body [
+    {ROWNUM:'1', techNm:'lG'
+    },
+    {ROWNUM:'2', techNm:'lH'
+    }
+]
+
+req_body {fabNm:'m12',techNm:'tE',lotcodeNm:''
+} -> res_body [
+    {ROWNUM:'1', techNm:'lI'
+    },
+    {ROWNUM:'2', techNm:'lJ'
+    }
+]
+req_body {fabNm:'m12',techNm:'tF',lotcodeNm:''
+} -> res_body [
+    {ROWNUM:'1', techNm:'lK'
+    },
+    {ROWNUM:'2', techNm:'lL'
+    }
+]
+
+
+
+[fabNm:'m10',techNm:'tA',lotcodeNm:'lA'
+]
+[fabNm:'m10',techNm:'tA',lotcodeNm:'lB'
+]
+
+[fabNm:'m10',techNm:'tB',lotcodeNm:'lC'
+]
+[fabNm:'m10',techNm:'tB',lotcodeNm:'lD'
+]
+
+[fabNm:'m11',techNm:'tC',lotcodeNm:'lE'
+]
+[fabNm:'m11',techNm:'tC',lotcodeNm:'lF'
+]
+
+[fabNm:'m11',techNm:'tD',lotcodeNm:'lG'
+]
+[fabNm:'m11',techNm:'tD',lotcodeNm:'lH'
+]
+
+[fabNm:'m12',techNm:'tE',lotcodeNm:'lI'
+]
+[fabNm:'m12',techNm:'tE',lotcodeNm:'lJ'
+]
+
+[fabNm:'m12',techNm:'tF',lotcodeNm:'lK'
+]
+[fabNm:'m12',techNm:'tF',lotcodeNm:'lL'
+]
